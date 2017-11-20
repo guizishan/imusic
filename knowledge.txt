@@ -1,0 +1,30 @@
+1.创建一个nodejs项目：npm init
+2.使用git管理项目版本:git init,创建.gitignore
+3.这是一个基于koa框架的web应用
+	3.1 安装koa依赖
+	3.2 创建app.js,在这里创建koa web服务器实例，配置中间件，启动服务器
+4.使用koa-router来实现路由，引导请求到对应的处理程序，返回适当的响应内容
+	4.1 安装koa-router
+	4.2 配置路由
+		创建路由模块
+		在app.js中导入模块
+		将模块作为中间件添加到app中
+5.使用swig作为模板解析器
+	5.1 安装 koa-views,swig
+	5.2 创建模板页面
+	5.3 在app.js中添加中间件
+	app.use(views(__dirname + '/views', {
+	  map: {
+	    html: 'swig'
+	  }
+	}));
+6.要获取post请求参数数据
+	6.1 安装koa-bodyparser
+	6.2 
+	app.use(bodyparser({
+	  enableTypes:['json', 'form', 'text']
+	}))
+    6.3 在路由器中使用
+    	ctx.request.body获取解析后的数据
+7.get请求请求参数：
+	ctx.params

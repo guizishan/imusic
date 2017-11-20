@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}i音乐{% endblock %}</title>
+	<style type="text/css">
+		.head{
+			height: 100px;
+			background: green;
+		}
+		.foot{
+			height: 100px;
+			background: red;
+		}
+	</style>
+	{% block links %}{% endblock %}
+</head>
+<body>
+	<div class="head"></div>
+	{% block content %}{% endblock %}
+	<div class="foot"></div>
+</body>
+</html>
