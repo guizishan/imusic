@@ -4,6 +4,7 @@ let bodyparser = require('koa-bodyparser');
 
 
 let singer = require('./router/singer');
+let user = require('./router/user');
 
 
 const app = new koa();
@@ -20,6 +21,7 @@ app.use(views(__dirname + '/views', {
 }));
 
 app.use(singer.routes());
+app.use(user.routes());
 
 
 
