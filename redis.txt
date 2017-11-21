@@ -1,0 +1,21 @@
+一、redis是一个在内存中运行的键值对的数据库
+二、redis的安装，redis主要是运行在类linux系统中，windows的安装版本在官网中没有
+三、redis的数据类型：
+	string		
+	hash
+	set
+	list
+	zset
+四、不同数据类型的数据的增删改查
+	string
+		增：set key value
+		删：del key
+		改：set key value
+		查：get key,mget key1 key2
+	hash:
+		增：hmset key p1 v1 p2 v2 p3 v3 ... pn vn
+		删；del key
+		改：hmset key pn v
+		查：hgetall key,hget key pn
+	list:
+		增：rpush key 
